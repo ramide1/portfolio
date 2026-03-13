@@ -1,0 +1,70 @@
+---
+import { languageSkills } from '../data/profile';
+---
+
+<section class="language reveal" id="language">
+  <h2>Languages</h2>
+  <div class="language-grid">
+    <div class="language-item card">
+      <h3>{languageSkills.mother}</h3>
+      <p>Native</p>
+    </div>
+    {languageSkills.other.map((lang) => (
+      <div class="language-item card">
+        <h3>{lang.language}</h3>
+        <div class="language-levels">
+          <div class="level">
+            <span>Listening:</span> <strong>{lang.understanding.listening}</strong>
+          </div>
+          <div class="level">
+            <span>Reading:</span> <strong>{lang.understanding.reading}</strong>
+          </div>
+          <div class="level">
+            <span>Speaking (production):</span> <strong>{lang.speaking.production}</strong>
+          </div>
+          <div class="level">
+            <span>Speaking (interaction):</span> <strong>{lang.speaking.interaction}</strong>
+          </div>
+          <div class="level">
+            <span>Writing:</span> <strong>{lang.writing}</strong>
+          </div>
+        </div>
+        <p class="cefr">CEFR levels: A1/A2: Basic, B1/B2: Independent, C1/C2: Proficient</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .language-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-primary);
+  }
+  .language-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  .level {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+  }
+  .level strong {
+    color: var(--text-primary);
+  }
+  .cefr {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+  }
+</style>

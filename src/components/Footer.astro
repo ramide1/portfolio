@@ -1,0 +1,47 @@
+---
+import { personalInfo } from '../data/profile';
+import Icon from './Icon.astro';
+---
+
+<footer class="footer reveal">
+  <div class="footer-content">
+    <div class="footer-copyright">
+      © {new Date().getFullYear()} Ramiro Depaoli. All rights reserved.
+    </div>
+    <div class="footer-links">
+      <a href={`mailto:${personalInfo.email}`}><Icon name="mail" /></a>
+      <a href={personalInfo.github} target="_blank"><Icon name="github" /></a>
+      <a href={personalInfo.linkedin} target="_blank"><Icon name="linkedin" /></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copyright {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-links a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+  }
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+</style>

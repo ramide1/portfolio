@@ -1,0 +1,67 @@
+---
+import { experience } from '../data/profile';
+import Icon from './Icon.astro';
+---
+
+<section class="experience reveal" id="experience">
+  <h2>Work Experience</h2>
+  <div class="timeline">
+    {experience.map((job) => (
+      <div class="job card">
+        <div class="job-header">
+          <h3>{job.position}</h3>
+          <div class="job-company">{job.company}</div>
+          <div class="job-date">
+            <Icon name="calendar" /> {job.startDate} - {job.endDate}
+          </div>
+          <div class="job-location">
+            <Icon name="map" /> {job.location}
+          </div>
+        </div>
+        <ul class="job-points">
+          {job.points.map((point) => (
+            <li>{point}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .job {
+    list-style: none;
+  }
+  .job-header {
+    margin-bottom: 1rem;
+  }
+  .job-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .job-company {
+    font-size: 1.1rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+  }
+  .job-date, .job-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+  .job-points {
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+  }
+  .job-points li {
+    margin-bottom: 0.5rem;
+  }
+</style>
