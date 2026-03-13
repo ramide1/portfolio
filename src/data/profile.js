@@ -16,7 +16,7 @@ export const experience = [
     location: 'Buenos Aires, Argentina',
     position: 'Fullstack Developer',
     startDate: '12/2022',
-    endDate: 'Present',
+    endDate: '02/2026',
     points: [
       'Maintained and evolved enterprise web applications, ensuring stability and scalability.',
       'Developed and deployed new features using PHP, Node.js, and Angular.',
