@@ -1,22 +1,24 @@
 ---
-import { education } from '../data/profile';
-import Icon from './Icon.astro';
+import { education } from "../profile";
+import Icon from "./Icon.astro";
 ---
 
-<section class="education reveal" id="education">
+<section class="education reveal">
   <h2>Education</h2>
   <div class="education-list">
-    {education.map((edu) => (
-      <div class="edu-item card">
-        <div class="edu-year">
-          <Icon name="calendar" /> {edu.year}
+    {
+      education.map((edu) => (
+        <div class="edu-item card">
+          <div class="edu-year">
+            <Icon name="calendar" /> {edu.year}
+          </div>
+          <div class="edu-details">
+            <h3>{edu.degree}</h3>
+            <p>{edu.institution}</p>
+          </div>
         </div>
-        <div class="edu-details">
-          <h3>{edu.degree}</h3>
-          <p>{edu.institution}</p>
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>
 

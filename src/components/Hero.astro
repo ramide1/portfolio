@@ -1,6 +1,6 @@
 ---
-import { personalInfo, cvFiles, profileImage } from '../data/profile';
-import Icon from './Icon.astro';
+import { personalInformation, cvFiles, profileImage } from "../profile";
+import Icon from "./Icon.astro";
 ---
 
 <section class="hero reveal">
@@ -13,16 +13,24 @@ import Icon from './Icon.astro';
       }
     </div>
     <h1 class="hero-name">Ramiro Depaoli</h1>
-    <p class="hero-title">{personalInfo.title}</p>
-    <p class="hero-location">{personalInfo.location}</p>
+    <p class="hero-title">{personalInformation.title}</p>
+    <p class="hero-location">{personalInformation.location}</p>
     <div class="hero-contact">
-      <a href={`mailto:${personalInfo.email}`} class="btn btn-outline">
+      <a href={`mailto:${personalInformation.email}`} class="btn btn-outline">
         <Icon name="mail" /> Email
       </a>
-      <a href={personalInfo.github} target="_blank" class="btn btn-outline">
+      <a
+        href={personalInformation.github}
+        target="_blank"
+        class="btn btn-outline"
+      >
         <Icon name="github" /> GitHub
       </a>
-      <a href={personalInfo.linkedin} target="_blank" class="btn btn-outline">
+      <a
+        href={personalInformation.linkedin}
+        target="_blank"
+        class="btn btn-outline"
+      >
         <Icon name="linkedin" /> LinkedIn
       </a>
     </div>
@@ -151,17 +159,27 @@ import Icon from './Icon.astro';
   }
 
   @keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(50px, -30px) scale(1.1); }
-    50% { transform: translate(20px, 50px) scale(0.9); }
-    75% { transform: translate(-30px, -20px) scale(1.05); }
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(50px, -30px) scale(1.1);
+    }
+    50% {
+      transform: translate(20px, 50px) scale(0.9);
+    }
+    75% {
+      transform: translate(-30px, -20px) scale(1.05);
+    }
   }
 
   @media (max-width: 768px) {
     .hero {
       min-height: 70vh;
     }
-    .hero-contact, .hero-cv {
+    .hero-contact,
+    .hero-cv {
       flex-direction: column;
       align-items: flex-start;
     }

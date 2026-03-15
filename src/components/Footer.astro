@@ -1,6 +1,6 @@
 ---
-import { personalInfo } from '../data/profile';
-import Icon from './Icon.astro';
+import { personalInformation } from "../profile";
+import Icon from "./Icon.astro";
 ---
 
 <footer class="footer reveal">
@@ -9,9 +9,13 @@ import Icon from './Icon.astro';
       © {new Date().getFullYear()} Ramiro Depaoli. All rights reserved.
     </div>
     <div class="footer-links">
-      <a href={`mailto:${personalInfo.email}`}><Icon name="mail" /></a>
-      <a href={personalInfo.github} target="_blank"><Icon name="github" /></a>
-      <a href={personalInfo.linkedin} target="_blank"><Icon name="linkedin" /></a>
+      <a href={`mailto:${personalInformation.email}`}><Icon name="mail" /></a>
+      <a href={personalInformation.github} target="_blank"
+        ><Icon name="github" /></a
+      >
+      <a href={personalInformation.linkedin} target="_blank"
+        ><Icon name="linkedin" /></a
+      >
     </div>
   </div>
 </footer>

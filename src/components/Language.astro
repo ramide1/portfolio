@@ -1,37 +1,45 @@
 ---
-import { languageSkills } from '../data/profile';
+import { languageSkills } from "../profile";
 ---
 
-<section class="language reveal" id="language">
+<section class="language reveal">
   <h2>Languages</h2>
   <div class="language-grid">
     <div class="language-item card">
       <h3>{languageSkills.mother}</h3>
       <p>Native</p>
     </div>
-    {languageSkills.other.map((lang) => (
-      <div class="language-item card">
-        <h3>{lang.language}</h3>
-        <div class="language-levels">
-          <div class="level">
-            <span>Listening:</span> <strong>{lang.understanding.listening}</strong>
+    {
+      languageSkills.other.map((lang) => (
+        <div class="language-item card">
+          <h3>{lang.language}</h3>
+          <div class="language-levels">
+            <div class="level">
+              <span>Listening:</span>{" "}
+              <strong>{lang.understanding.listening}</strong>
+            </div>
+            <div class="level">
+              <span>Reading:</span>{" "}
+              <strong>{lang.understanding.reading}</strong>
+            </div>
+            <div class="level">
+              <span>Speaking (production):</span>{" "}
+              <strong>{lang.speaking.production}</strong>
+            </div>
+            <div class="level">
+              <span>Speaking (interaction):</span>{" "}
+              <strong>{lang.speaking.interaction}</strong>
+            </div>
+            <div class="level">
+              <span>Writing:</span> <strong>{lang.writing}</strong>
+            </div>
           </div>
-          <div class="level">
-            <span>Reading:</span> <strong>{lang.understanding.reading}</strong>
-          </div>
-          <div class="level">
-            <span>Speaking (production):</span> <strong>{lang.speaking.production}</strong>
-          </div>
-          <div class="level">
-            <span>Speaking (interaction):</span> <strong>{lang.speaking.interaction}</strong>
-          </div>
-          <div class="level">
-            <span>Writing:</span> <strong>{lang.writing}</strong>
-          </div>
+          <p class="cefr">
+            CEFR levels: A1/A2: Basic, B1/B2: Independent, C1/C2: Proficient
+          </p>
         </div>
-        <p class="cefr">CEFR levels: A1/A2: Basic, B1/B2: Independent, C1/C2: Proficient</p>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>
 

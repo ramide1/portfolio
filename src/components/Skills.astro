@@ -1,24 +1,20 @@
 ---
-import { hardSkills, softSkills } from '../data/profile';
+import { hardSkills, softSkills } from "../profile";
 ---
 
-<section class="skills reveal" id="skills">
+<section class="skills reveal">
   <h2>Skills</h2>
   <div class="skills-grid">
     <div class="skill-category">
       <h3>Hard Skills</h3>
       <div class="skill-tags">
-        {hardSkills.map((skill) => (
-          <span class="skill-tag">{skill}</span>
-        ))}
+        {hardSkills.map((skill) => <span class="skill-tag">{skill}</span>)}
       </div>
     </div>
     <div class="skill-category">
       <h3>Soft Skills</h3>
       <div class="skill-tags">
-        {softSkills.map((skill) => (
-          <span class="skill-tag">{skill}</span>
-        ))}
+        {softSkills.map((skill) => <span class="skill-tag">{skill}</span>)}
       </div>
     </div>
   </div>
