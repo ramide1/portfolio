@@ -1,5 +1,6 @@
 ---
 import { hardSkills, softSkills } from "../profile";
+import Icon from "./Icon.astro";
 ---
 
 <section class="skills reveal">
@@ -8,13 +9,25 @@ import { hardSkills, softSkills } from "../profile";
     <div class="skill-category">
       <h3>Hard Skills</h3>
       <div class="skill-tags">
-        {hardSkills.map((skill) => <span class="skill-tag">{skill}</span>)}
+        {
+          hardSkills.map((skill) => (
+            <span class="skill-tag">
+              <Icon name={skill.icon as any} /> {skill.name}
+            </span>
+          ))
+        }
       </div>
     </div>
     <div class="skill-category">
       <h3>Soft Skills</h3>
       <div class="skill-tags">
-        {softSkills.map((skill) => <span class="skill-tag">{skill}</span>)}
+        {
+          softSkills.map((skill) => (
+            <span class="skill-tag">
+              <Icon name={skill.icon as any} /> {skill.name}
+            </span>
+          ))
+        }
       </div>
     </div>
   </div>

@@ -9,21 +9,31 @@ import Icon from "./Icon.astro";
     {
       experience.map((job) => (
         <div class="job card">
-          <div class="job-header">
-            <h3>{job.position}</h3>
-            <div class="job-company">{job.company}</div>
-            <div class="job-date">
-              <Icon name="calendar" /> {job.startDate} - {job.endDate}
+          <div class="job-content">
+            <div class="job-info">
+              <div class="job-header">
+                <h3>{job.position}</h3>
+                <div class="job-company">{job.company}</div>
+                <div class="job-date">
+                  <Icon name="calendar" /> {job.startDate} - {job.endDate}
+                </div>
+                <div class="job-location">
+                  <Icon name="map" /> {job.location}
+                </div>
+              </div>
+              <ul class="job-points">
+                {job.points.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
             </div>
-            <div class="job-location">
-              <Icon name="map" /> {job.location}
-            </div>
+
+            {job.imageUrl && (
+              <div class="job-logo">
+                <img src={job.imageUrl} alt={`${job.company} logo`} />
+              </div>
+            )}
           </div>
-          <ul class="job-points">
-            {job.points.map((point) => (
-              <li>{point}</li>
-            ))}
-          </ul>
         </div>
       ))
     }
@@ -66,5 +76,25 @@ import Icon from "./Icon.astro";
   }
   .job-points li {
     margin-bottom: 0.5rem;
+  }
+  .job-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .job-info {
+    flex: 1;
+  }
+
+  .job-logo {
+    flex-shrink: 0;
+  }
+
+  .job-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
   }
 </style>

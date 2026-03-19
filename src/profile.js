@@ -89,14 +89,34 @@ const languageSkills = {
 };
 
 const hardSkills = [
-  'PHP', 'Node.js', 'Bun', 'MySQL', 'TypeScript', 'Windows OS', 'Angular', 'JavaScript',
-  'Linux server administration', 'Docker', 'HTML', 'MongoDB', 'Java', 'REST APIs',
-  'PostgreSQL', 'Git/GitHub', 'Requirements analysis', 'Agile methodologies (Scrum/Agile)',
-  'Scalability & performance optimization'
+  { name: 'PHP', icon: 'php' },
+  { name: 'Node.js', icon: 'nodejs' },
+  { name: 'Bun', icon: 'javascript' },
+  { name: 'MySQL', icon: 'database' },
+  { name: 'TypeScript', icon: 'typescript' },
+  { name: 'Windows OS', icon: 'windows' },
+  { name: 'Angular', icon: 'angular' },
+  { name: 'JavaScript', icon: 'javascript' },
+  { name: 'Linux server administration', icon: 'linux' },
+  { name: 'Docker', icon: 'docker' },
+  { name: 'HTML', icon: 'code' },
+  { name: 'MongoDB', icon: 'database' },
+  { name: 'Java', icon: 'java' },
+  { name: 'REST APIs', icon: 'api' },
+  { name: 'PostgreSQL', icon: 'database' },
+  { name: 'Git/GitHub', icon: 'github' },
+  { name: 'Requirements analysis', icon: 'code' },
+  { name: 'Agile methodologies (Scrum/Agile)', icon: 'code' },
+  { name: 'Scalability & performance optimization', icon: 'code' }
 ];
 
 const softSkills = [
-  'Critical thinking', 'Teamwork', 'Adaptability', 'Problem-solving', 'Time management', 'Communication'
+  { name: 'Critical thinking', icon: 'code' },
+  { name: 'Teamwork', icon: 'code' },
+  { name: 'Adaptability', icon: 'code' },
+  { name: 'Problem-solving', icon: 'code' },
+  { name: 'Time management', icon: 'code' },
+  { name: 'Communication', icon: 'code' }
 ];
 
 const baseUrl = import.meta.env.BASE_URL;
@@ -107,6 +127,6 @@ const cvFiles = {
   utn: baseUrl + '/files/utn.pdf'
 };
 
-const profileImage = baseUrl + '/files/ramiro-fotor-bg-remover-20250817113657.png';
+const profileImage = baseUrl + '/files/ramiro-foto.jpeg';
 
 export { personalInformation, experience, projects, education, languageSkills, hardSkills, softSkills, cvFiles, profileImage }
