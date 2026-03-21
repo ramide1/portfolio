@@ -29,7 +29,7 @@ const experience = [
   {
     company: 'ISFT 118',
     link: 'https://www.facebook.com/isft118',
-    imageUrl: 'https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/304944848_415231087265018_8392148817878034642_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=4ODKu-2SbbgQ7kNvwFDpiz3&_nc_oc=AdlZVsDZPUBsJfi65u3aia9-InKPbFfHyWuEV6AYNkGaAXGLy2E4ewJE3zs045HhCVI&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=uQ2auj1nGELzBXxqpTd2LQ&_nc_ss=8&oh=00_AfzLHTInX3I_LToWvzpvaaB24w_eyfjQPLqiRioKBv5h4w&oe=69BBD8A7',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZqcqbBVzQWEyi2C9wduAEaxkj0XOFh8s4ukVQGpb05Q&s&ec=121585071',
     location: 'San Pedro, Buenos Aires, Argentina',
     position: 'Backend Developer',
     startDate: '04/2022',
