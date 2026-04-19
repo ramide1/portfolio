@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
+import { personalInformation } from "../profile";
 
 export interface Props {
   title?: string;
 }
 
-const { title = "Ramiro Depaoli - Portfolio" } = Astro.props;
+const { title = personalInformation.name + " - Portfolio" } = Astro.props;
 ---
 
 <!doctype html>

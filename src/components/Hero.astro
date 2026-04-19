@@ -8,11 +8,15 @@ import Icon from "./Icon.astro";
     <div class="hero-image-wrapper">
       {
         profileImage && (
-          <img src={profileImage} alt="Ramiro Depaoli" class="hero-image" />
+          <img
+            src={profileImage}
+            alt={personalInformation.name}
+            class="hero-image"
+          />
         )
       }
     </div>
-    <h1 class="hero-name">Ramiro Depaoli</h1>
+    <h1 class="hero-name">{personalInformation.name}</h1>
     <p class="hero-title">{personalInformation.title}</p>
     <p class="hero-location">{personalInformation.location}</p>
     <div class="hero-contact">
@@ -119,7 +123,6 @@ import Icon from "./Icon.astro";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
     z-index: 1;
   }
