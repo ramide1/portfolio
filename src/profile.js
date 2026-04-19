@@ -51,10 +51,22 @@ const projects = [
     tags: ['AI', 'WhatsApp', 'Node.js']
   },
   {
-    title: 'Arduino System',
-    description: 'IoT solution with fingerprint and sensor control.',
+    title: 'Arduino Backend Websocket System',
+    description: 'IoT backend websocket solution with fingerprint and sensor control.',
     link: 'https://github.com/ramide1/sistema-arduino',
-    tags: ['Arduino', 'IoT', 'C++']
+    tags: ['Arduino', 'IoT', 'Node.js']
+  },
+  {
+    title: 'Pedidos System',
+    description: 'Laravel based restaurant delivery solution.',
+    link: 'https://github.com/ramide1/pedidos',
+    tags: ['Node.js', 'PHP']
+  },
+  {
+    title: 'WhatsApp ARCA Bot',
+    description: 'WhatsApp bot for fiscal operations with ARCA.',
+    link: 'https://github.com/ramide1/bot-wp-arca',
+    tags: ['WhatsApp', 'Node.js']
   }
 ];
 

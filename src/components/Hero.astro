@@ -178,10 +178,30 @@ import Icon from "./Icon.astro";
     .hero {
       min-height: 70vh;
     }
+    .hero-content {
+      max-width: 100%;
+      width: 100%;
+    }
+    .hero-image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-image {
+      width: 200px;
+      height: 200px;
+      max-width: 80vw;
+    }
     .hero-contact,
     .hero-cv {
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
+    }
+    .hero-contact .btn,
+    .hero-cv .btn {
+      width: 100%;
+      justify-content: center;
     }
   }
 </style>
